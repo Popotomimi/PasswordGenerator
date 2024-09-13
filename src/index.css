@@ -21,7 +21,8 @@ html {
 }
 
 .generate-all {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 150px auto;
   text-align: center;
   background-color: #22222269;
@@ -30,7 +31,8 @@ html {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   display: flex;
-  height: 50vh;
+  flex-direction: column;
+  height: auto;
 }
 
 .generate-all button {
@@ -55,9 +57,10 @@ html {
   background: url("./assets/img/bg-form.jpg");
   background-size: cover;
   background-position: center;
-  width: 50%;
+  width: 100%;
+  height: 200px;
   border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .banner h1 {
@@ -72,7 +75,7 @@ html {
   align-items: center;
   height: 100%;
   border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .generate-form {
@@ -80,11 +83,12 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   background-color: #fdfdfd;
   color: #222;
-  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  padding: 20px;
 }
 
 .generate-form h2 {
@@ -93,7 +97,8 @@ html {
 }
 
 .first-h1 {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 2.5rem auto;
   text-align: center;
   background-color: #2222223a;
@@ -143,6 +148,7 @@ html {
 
 .generate-options {
   display: flex;
+  flex-direction: column;
   margin-bottom: 1rem;
   margin-left: 15px;
   margin-right: 15px;
@@ -171,4 +177,38 @@ html {
 
 .generate-options input {
   margin-top: 15px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .generate-all {
+    flex-direction: row;
+    height: 50vh;
+    width: 90%;
+  }
+
+  .banner {
+    width: 50%;
+    height: auto;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+
+  .banner-layer {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+
+  .generate-form {
+    width: 50%;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .generate-all {
+    width: 90%;
+  }
 }
