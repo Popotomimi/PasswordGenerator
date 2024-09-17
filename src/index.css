@@ -183,7 +183,7 @@ html {
 @media (min-width: 768px) {
   .generate-all {
     flex-direction: row;
-    height: 50vh;
+    height: 70vh;
     width: 90%;
   }
 
@@ -207,8 +207,15 @@ html {
   }
 }
 
+@media (max-height: 700px) {
+  .generate-all {
+    height: 90vh;
+  }
+}
+
 @media (max-width: 767px) {
   .generate-all {
+    height: auto;
     width: 90%;
   }
 }
