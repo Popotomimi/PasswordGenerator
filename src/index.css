@@ -179,6 +179,103 @@ html {
   margin-top: 15px;
 }
 
+/* Nabar */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  border-bottom: solid #0097ff 2px;
+  padding: 1em;
+}
+
+nav svg {
+  color: #ea02ff;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+nav svg:hover {
+  color: #0097ff;
+}
+
+nav p {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #0097ff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+nav p:hover {
+  color: #ea02ff;
+}
+
+/* Footer */
+
+.github {
+  text-decoration: none;
+  font-size: 3rem;
+  background-color: #000;
+  border-radius: 222px;
+  border: solid 1px #fff;
+  color: #fff;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.github:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.linkedin {
+  text-decoration: none;
+  font-size: 3rem;
+  background-color: #fff;
+  border-radius: 6px;
+  border: solid 1px #fff;
+  color: #0e76a8;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.linkedin:hover {
+  border: solid 1px #0e76a8;
+  background-color: #0e76a8;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background-color: #222;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10%;
+  border-top: #ea02ff solid 2px;
+  font-weight: bold;
+}
+
+footer span {
+  color: #0e76a8;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+  transform: 0.5s;
+}
+
+footer span:hover {
+  background-color: #c3c3c3;
+  color: #222;
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
   .generate-all {
@@ -217,5 +314,16 @@ html {
   .generate-all {
     height: auto;
     width: 90%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer * {
+    margin-bottom: 0.5em;
   }
 }
