@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { FiCopy } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 const PasswordGenerator = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -15,7 +16,7 @@ const PasswordGenerator = () => {
       getLetterLowerCase,
       getLetterUpperCase,
       getNumber,
-      getSymbol
+      getSymbol,
     );
   };
 
@@ -40,7 +41,7 @@ const PasswordGenerator = () => {
     getLetterLowerCase,
     getLetterUpperCase,
     getNumber,
-    getSymbol
+    getSymbol,
   ) => {
     let password = "";
 
@@ -78,7 +79,7 @@ const PasswordGenerator = () => {
 
   const copyPassword = () => {
     navigator.clipboard.writeText(password).then(() => {
-      console.log("Copiou!");
+      toast.success("Senha copiada com sucesso!");
     });
   };
 
@@ -94,8 +95,8 @@ const PasswordGenerator = () => {
       <div className="generate-form">
         <h2>Selecione as opções que você deseja:</h2>
         <div className="generate-options">
-          <div className="form-control">
-            <label htmlFor="length">Quantidade de caracteres:</label>
+          <div className="form-control-caracteres">
+            <label htmlFor="length">Caracteres:</label>
             <input
               type="range"
               min="4"
